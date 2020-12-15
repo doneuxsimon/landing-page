@@ -2,6 +2,9 @@ html {
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, rgba(251, 31, 4, 1) 20%, rgba(203, 208, 37, 1) 80%);
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
 }
 
 body {
@@ -10,5 +13,68 @@ body {
     background-size: contain;
     background-position-x: center;
     width: 100%;
+    min-height: 100%;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+}
+
+#heure {
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    padding-top: 10%;
+    padding-bottom: 15%;
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid white;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+        0 0 0 4px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
     height: 100%;
+    transform: translateY(-3px);
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    text-decoration: none;
+    padding: 40px;
+}
+
+a:hover {
+    color: crimson;
+    text-shadow: yellow 0.1em 0.1em 0.2em;
 }
